@@ -1,6 +1,17 @@
 # luafile
 Module to process lua files for generating documentation
 ## Functions
+name | summary
+--- | ---
+[LuaFile:append(lines)](#luafileappendlines) | Append a line (or lines) to an array
+[LuaFile:check_for_tag(line, func_doc_tags, index, something, options, ploptions)](#luafilecheck_for_tagline-func_doc_tags-index-something-options-ploptions) | Checks for a tag inside a doc comment
+[LuaFile:initialize(path)](#luafileinitializepath) | The initialization method for LuaFile class.
+[LuaFile:line_has_param_type(str)](#luafileline_has_param_typestr) | this doc is for...
+[LuaFile:process()](#luafileprocess) | The entry point for starting the processing of a lua file.
+[get_file_name(path)](#get_file_namepath) | Gets the file name from a path
+[process_function_tag(self, tag, doc)](#process_function_tagself-tag-doc) | Custom method to process the function tag
+[process_params_tag(self, tag, doc)](#process_params_tagself-tag-doc) | Custom method to process the params tag shit... where things get harry
+[process_tag(self, tag, doc)](#process_tagself-tag-doc) | Generic processing of a tag
 ### LuaFile:append(lines)
 #### Parameters
 name | type | description
@@ -16,8 +27,8 @@ line | string | line
 func_doc_tags | table | func doc tags
 index | number | index
 something | table | this shouldn't exPLODE
-options | table | Table of options [*[sea, bee, z](#options)*]
-ploptions | table | Table of ploptions [*[one, eight, three](#options)*]
+options | table | Table of options [*sea, bee, z*]
+ploptions | table | Table of ploptions [*one, eight, three*]
 ##### options
 name | type | description
 --- | --- | ---
