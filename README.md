@@ -114,3 +114,4 @@ self | table | the instance of a LuaFile
 tag | string | the tag that is being processed (e.g. @details)
 doc | table | the whole doc (json obj)
 
+# test_function(...)
